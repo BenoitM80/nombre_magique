@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="nombre_magique.Views.WinPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="mainLayout" Spacing="0" VerticalOptions="Center">
+     
+                
+            <Image x:Name="ImgLabel"
+                   Source="win.png" 
+                   Margin="50,50" 
+                   HeightRequest="200"/>
+
+            <Label  x:Name="MessageLabel"
+                    Text="BRAVO!"                     
+                    HorizontalOptions="Center" 
+                    FontSize="30"                          
+                    TextColor="{StaticResource titleColor}"/>
+            
+            <Label x:Name="ScoreLabel"                                       
+                   HorizontalOptions="Center" 
+                   FontSize="20"       
+                   FontAttributes="Italic"
+                   TextColor="{StaticResource titleColor}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

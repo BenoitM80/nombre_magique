@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:nombre_magique.Views"
+             x:Class="nombre_magique.Views.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Padding="0">
+            
+            
+       
+        <views:StarsView />
+
+        <Frame BackgroundColor="Transparent" HasShadow="False" VerticalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="Center">
+
+                <Label Text="Le nombre"                     
+                            HorizontalOptions="Center" 
+                           FontSize="50" 
+                          
+                           TextColor="{StaticResource titleColor}"/>
+                <Label Text="magique"                     
+                            HorizontalOptions="Center" 
+                           FontSize="50" 
+                           
+                           TextColor="{StaticResource titleColor}"/>
+
+                <Button x:Name="playButton"
+                            Text="JOUER ! " 
+                            HorizontalOptions="Center" 
+                            WidthRequest="120" 
+                            BackgroundColor="{StaticResource shadowColor}"
+                            Margin="0,20,0,0"
+                            TextColor="White" 
+                            Clicked="PlayButton_Clicked"/>
+            </StackLayout>
+
+        </Frame>
+
+        <BoxView Color="{StaticResource shadowColor}"
+                     Margin="-20,0,-20,-35"
+                     HeightRequest="120"
+                     Rotation="-10"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

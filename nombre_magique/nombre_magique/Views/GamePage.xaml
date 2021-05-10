@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:nombre_magique.Views"
+             x:Class="nombre_magique.Views.GamePage">
+
+    
+
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+        <views:StarsView  Grid.Row="0"  Grid.Column="0"/>
+
+
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" VerticalOptions="Center" Margin="0,-40,0,0">
+            
+            <Label Text="Devinez le"                     
+                    HorizontalOptions="Center" 
+                   FontSize="25"        
+                   TextColor="{StaticResource titleColor}"/>
+            
+            <Label Text="nombre magique"                    
+                    HorizontalOptions="Center" 
+                   FontSize="25" 
+                   TextColor="{StaticResource titleColor}"/>
+                   
+            <Label x:Name="valLabel"
+                 HorizontalOptions="Center"
+                 FontAttributes="Italic"
+                  FontSize="15"
+                   TextColor="{StaticResource titleColor}"/>            
+      
+                <Entry x:Name="NumberEntry" 
+                       Placeholder="?" 
+                       PlaceholderColor="White"
+                       BackgroundColor="{StaticResource shadowColor}"
+                       FontSize="60"
+                       Keyboard="Numeric" 
+                       HorizontalOptions="Center" 
+                       HorizontalTextAlignment="Center"
+                       HeightRequest="80"
+                       WidthRequest="120" 
+                       Margin="0,20,0,0"/>
+
+
+                <Button Text="Deviner" 
+                        HorizontalOptions="Center" 
+                        WidthRequest="120" 
+                        BackgroundColor="{StaticResource shadowColor}"
+                        TextColor="White"
+                        Clicked="GuessButton_Clicked"/>
+
+            <Label x:Name="TriesLabel"
+                   Text="Vies restantes : 4"
+                 HorizontalOptions="Center"
+                 FontAttributes="Italic"
+                   Margin="0,30,0,30"
+                  FontSize="20"
+                   TextColor="{StaticResource titleColor}"/>
+
+        </StackLayout>
+        <BoxView    Grid.Row="2"  Grid.Column="0"
+                    Color="{StaticResource shadowColor}"
+                    Margin="-20,0,-20,-35"
+                    HeightRequest="120"
+                    Rotation="-10"/>
+      
+    </Grid>
+</ContentPage>
